@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="1" hostname="dell-shubhamsaini" id="0" name="Training Project/tests" package="" skipped="0" tests="4" time="150.101" timestamp="Mon Oct 18 12:44:47 IST 2021">
+	    <properties>
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="testEnvironment" value="TestEnv" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+		      <property name="projectPath" value=".." />
+
+		      <property name="salesforceMetadataCache" value="Reload" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="testOutputLevel" value="INFO" />
+
+		      <property name="webBrowserType" value="Chrome" />
+
+		      <property name="resultsPath" value="../ANT/Results" />
+
+		      <property name="webBrowserConfiguration" value="Full Screen" />
+
+		      <property name="projectCachePath" value="C:\Users\shubham.saini\Training Use Case WS\Training Project\ANT\..\..\.provarCaches" />
+
+	    </properties>
+
+	    <testcase classname="tests/CustomAPI.testcase" name="CustomAPI.testcase" time="0.052">
+	</testcase>
+
+	    <testcase classname="tests/EmailURL.testcase" name="EmailURL.testcase" time="40.01">
+	</testcase>
+
+	    <testcase classname="tests/Sale &amp; Service\Service.testcase" name="Service.testcase" time="100.043">
+		      <failure message="Execution failed"><![CDATA[Failed to perform row openLayout.  Cause: [NullPointerException
+Stack Trace:
+java.lang.NullPointerException
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1838)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at java.lang.Double.valueOf(Double.java:502)
+	at com.provar.plugins.forcedotcom.core.ui.SfUiHandler.autoPaginateForLightningListViewModes(SfUiHandler.java:5080)
+	at com.provar.plugins.forcedotcom.core.ui.SfUiHandler.performRowOpenLayout(SfUiHandler.java:4903)
+	at com.provar.plugins.forcedotcom.core.ui.SfUiHandler.performRowOpen(SfUiHandler.java:4676)
+	at com.provar.plugins.forcedotcom.core.ui.SeleniumUiHandler.perform(SeleniumUiHandler.java:393)
+	at com.provar.plugins.forcedotcom.core.connection.SfConnectionHandler.delegateToUiHandler(SfConnectionHandler.java:346)
+	at com.provar.plugins.forcedotcom.core.connection.SfConnectionHandler.perform(SfConnectionHandler.java:337)
+	at com.provar.core.testexecution.common.java.TestExecutionContextImpl.doConnectionOperation(TestExecutionContextImpl.java:857)
+	at com.provar.plugins.forcedotcom.core.ui.UiWithRow.execute(UiWithRow.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.provar.core.testexecution.container.java.TestExecutionContainerImpl.invokeTestApi(TestExecutionContainerImpl.java:754)
+	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner.doInvokeTestApi(LocalTestExecutionContainerRunner.java:744)
+	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner.access$11(LocalTestExecutionContainerRunner.java:676)
+	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner$MessageProcessor.run(LocalTestExecutionContainerRunner.java:1400)
+]]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/WebService.testcase" name="WebService.testcase" time="2.135">
+	</testcase>
+
+  </testsuite>
+</testsuites>

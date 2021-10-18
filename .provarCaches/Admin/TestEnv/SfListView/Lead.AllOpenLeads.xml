@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfListView n="AllOpenLeads" s="List View" sfListId="00B5g00000ROLjc" t="All Open Leads">
+  <actions/>
+  <columns>
+    <sfListColumn boundToField="Name" boundToObject="Lead" fieldNameOrPath="Name" n="Name" s="" sortable="true"/>
+    <sfListColumn boundToField="Company" boundToObject="Lead" fieldNameOrPath="Company" n="Company" s="" sortable="true"/>
+    <sfListColumn boundToField="State" boundToObject="Lead" fieldNameOrPath="State" n="State/Province" s="" sortable="true"/>
+    <sfListColumn boundToField="Email" boundToObject="Lead" fieldNameOrPath="Email" n="Email" s="" sortable="true"/>
+    <sfListColumn boundToField="Status" boundToObject="Lead" fieldNameOrPath="Status" n="Lead Status" s="" sortable="true"/>
+    <sfListColumn boundToField="CreatedDate" boundToObject="Lead" fieldNameOrPath="CreatedDate" n="Created Date" s="" sortable="true"/>
+    <sfListColumn fieldNameOrPath="Owner.NameOrAlias" n="Owner Alias" s="" sortable="true"/>
+    <sfListColumn boundToField="IsUnreadByOwner" boundToObject="Lead" fieldNameOrPath="IsUnreadByOwner" n="Unread By Owner" s="" sortable="true"/>
+    <sfListColumn boundToField="Id" boundToObject="Lead" fieldNameOrPath="Id" hidden="true" n="Lead ID" s=""/>
+    <sfListColumn boundToField="LastModifiedDate" boundToObject="Lead" fieldNameOrPath="LastModifiedDate" hidden="true" n="Last Modified Date" s=""/>
+    <sfListColumn boundToField="SystemModstamp" boundToObject="Lead" fieldNameOrPath="SystemModstamp" hidden="true" n="System Modstamp" s=""/>
+    <sfListColumn boundToField="Id" boundToObject="Lead" fieldNameOrPath="Owner.Id" hidden="true" n="Lead ID" s=""/>
+    <sfListColumn boundToField="OwnerId" boundToObject="Lead" fieldNameOrPath="OwnerId" hidden="true" n="Lead Owner" s=""/>
+  </columns>
+</sfListView>

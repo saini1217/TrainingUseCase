@@ -1,0 +1,12 @@
+2021/10/18-14:30:07.039 5528 Reusing MANIFEST C:\Users\shubham.saini\Training Use Case WS\.provarCaches\.chromeProfiles\profile0\Default\IndexedDB\https_provartesting36-dev-ed.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/10/18-14:30:07.039 5528 Recovering log #48
+2021/10/18-14:30:07.047 5528 Reusing old log C:\Users\shubham.saini\Training Use Case WS\.provarCaches\.chromeProfiles\profile0\Default\IndexedDB\https_provartesting36-dev-ed.lightning.force.com_0.indexeddb.leveldb/000048.log 
+2021/10/18-14:30:12.575 90ec Level-0 table #53: started
+2021/10/18-14:30:12.641 90ec Level-0 table #53: 2712091 bytes OK
+2021/10/18-14:30:12.655 90ec Delete type=0 #48
+2021/10/18-14:30:16.707 48b4 Compacting 1@1 + 1@2 files
+2021/10/18-14:30:16.849 48b4 Generated table #54@1: 1494 keys, 1819240 bytes
+2021/10/18-14:30:16.852 48b4 Compacted 1@1 + 1@2 files => 1819240 bytes
+2021/10/18-14:30:16.861 48b4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/10/18-14:30:16.862 48b4 Delete type=2 #50
+2021/10/18-14:30:16.862 48b4 Delete type=2 #53

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Training Project/tests" tests="4" failures="1" skipped="0" hostname="dell-shubhamsaini" time="361.481" timestamp="Mon Oct 18 12:07:38 IST 2021">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value="TestEnv"/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reload"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\shubham.saini\Training Use Case WS\Training Project\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/CustomAPI.testcase" name="CustomAPI.testcase" time="0.03">
+	</testcase>
+	<testcase classname="tests/EmailURL.testcase" name="EmailURL.testcase" time="39.844">
+	</testcase>
+	<testcase classname="tests/Sale &amp; Service\Service.testcase" name="Service.testcase" time="314.553">
+		<failure message="Execution failed"><![CDATA[Error getting Screen Mapping definition.  Target: sf:ui:target?object=Case&action=New&noOverride=true, cause: [NullPointerException
+Stack Trace:
+java.lang.NullPointerException
+	at com.provar.plugins.forcedotcom.core.support.ApexSupport.getUiScreenMappingFromSfLayout(ApexSupport.java:7852)
+	at com.provar.plugins.forcedotcom.core.support.ApexSupport.getUiScreenMappingForTargetLocator(ApexSupport.java:4341)
+	at com.provar.plugins.forcedotcom.core.ui.locator.resolver.SfLightningUiWebElementLocatorResolver.resolveLocator(SfLightningUiWebElementLocatorResolver.java:184)
+	at com.provar.core.testexecution.common.java.TestExecutionContextImpl.getLocatorResolution(TestExecutionContextImpl.java:966)
+	at com.provar.core.testexecution.common.java.TestExecutionContextImpl.resolveLocator(TestExecutionContextImpl.java:932)
+	at com.provar.plugins.forcedotcom.core.ui.SeleniumUiHandler.performInteraction(SeleniumUiHandler.java:1996)
+	at com.provar.plugins.forcedotcom.core.ui.SfUiHandler.performInteraction(SfUiHandler.java:5440)
+	at com.provar.plugins.forcedotcom.core.ui.SeleniumUiHandler.perform(SeleniumUiHandler.java:418)
+	at com.provar.plugins.forcedotcom.core.connection.SfConnectionHandler.delegateToUiHandler(SfConnectionHandler.java:346)
+	at com.provar.plugins.forcedotcom.core.connection.SfConnectionHandler.perform(SfConnectionHandler.java:337)
+	at com.provar.core.testexecution.common.java.TestExecutionContextImpl.doConnectionOperation(TestExecutionContextImpl.java:857)
+	at com.provar.plugins.forcedotcom.core.ui.UiDoAction.execute(UiDoAction.java:130)
+	at sun.reflect.GeneratedMethodAccessor82.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.provar.core.testexecution.container.java.TestExecutionContainerImpl.invokeTestApi(TestExecutionContainerImpl.java:754)
+	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner.doInvokeTestApi(LocalTestExecutionContainerRunner.java:744)
+	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner.access$11(LocalTestExecutionContainerRunner.java:676)
+	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner$MessageProcessor.run(LocalTestExecutionContainerRunner.java:1400)
+]]]></failure>
+	</testcase>
+	<testcase classname="tests/WebService.testcase" name="WebService.testcase" time="1.945">
+	</testcase>
+</testsuite>

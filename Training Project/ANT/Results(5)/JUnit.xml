@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Training Project/tests" tests="4" failures="1" skipped="0" hostname="dell-shubhamsaini" time="54.843" timestamp="Mon Oct 18 09:21:11 IST 2021">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value="TestEnv"/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reload"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\shubham.saini\Training Use Case WS\Training Project\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/CustomAPI.testcase" name="CustomAPI.testcase" time="0.035">
+	</testcase>
+	<testcase classname="tests/EmailURL.testcase" name="EmailURL.testcase" time="40.002">
+	</testcase>
+	<testcase classname="tests/Sale &amp; Service\Service.testcase" name="Service.testcase" time="11.8">
+		<failure message="Execution failed"><![CDATA[Error loading object definition.  Object name: Lead, Cause: Error loading the Lead object - No Object metadata was returned by the Tooling API.  Object: Lead]]></failure>
+	</testcase>
+	<testcase classname="tests/WebService.testcase" name="WebService.testcase" time="1.886">
+	</testcase>
+</testsuite>

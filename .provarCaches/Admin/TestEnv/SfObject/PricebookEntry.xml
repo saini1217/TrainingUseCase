@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="01u" label="Price Book Entry" labelPlural="Price Book Entries" layoutable="true" n="PricebookEntry" queryable="true" retrieveable="true" s="" standardLabel="Price Book Entry" t="Price Book Entry (01u)" updatable="true" urlDetail="https://provartesting36-dev-ed.my.salesforce.com/{ID}" urlEdit="https://provartesting36-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://provartesting36-dev-ed.my.salesforce.com/01u/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Price Book Entry ID" type="id" updateable="false"/>
+    <sfField createable="false" length="255" n="Name" nameField="true" t="Product Name" updateable="false"/>
+    <sfField length="18" n="Pricebook2Id" relationshipName="Pricebook2" required="true" t="Price Book" type="reference" updateable="false">
+      <referenceTos>
+        <string>Pricebook2</string>
+      </referenceTos>
+    </sfField>
+    <sfField length="18" n="Product2Id" relationshipName="Product2" required="true" t="Product" type="reference" updateable="false">
+      <referenceTos>
+        <string>Product2</string>
+      </referenceTos>
+    </sfField>
+    <sfField n="UnitPrice" precision="18" required="true" scale="2" t="List Price" type="currency"/>
+    <sfField editPermission="false" n="IsActive" t="Active" type="_boolean"/>
+    <sfField n="UseStandardPrice" t="Use Standard Price" type="_boolean"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" length="255" n="ProductCode" t="Product Code" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsArchived" t="Archived" type="_boolean" updateable="false"/>
+    <sfField filterable="false" n="StandardPrice" notVisibleToMetadataUser="true" t="Standard Price"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedContractLineItemList" childName="ContractLineItem" field="PricebookEntryId" n="ContractLineItems" relationshipName="ContractLineItems" s="2-" t="ContractLineItem"/>
+    <sfObjectRelationship alias="RelatedLineItemList" childName="OpportunityLineItem" field="PricebookEntryId" n="OpportunityLineItems" relationshipName="OpportunityLineItems" s="2-" t="OpportunityLineItem"/>
+    <sfObjectRelationship alias="RelatedOrderItemList" childName="OrderItem" field="PricebookEntryId" n="OrderItems" relationshipName="OrderItems" s="2-" t="OrderItem"/>
+    <sfObjectRelationship alias="RelatedEntityHistoryList" childName="PricebookEntryHistory" field="PricebookEntryId" n="Histories" relationshipName="Histories" s="2-" t="PricebookEntryHistory"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="RecordActionHistory" field="ParentRecordId" n="RecordActionHistories" relationshipName="RecordActionHistories" s="2-" t="RecordActionHistory"/>
+    <sfObjectRelationship childName="WorkOrderLineItem" field="PricebookEntryId" n="WorkOrderLineItems" relationshipName="WorkOrderLineItems" s="2-" t="WorkOrderLineItem"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome PricebookEntries List" n="New"/>
+    <sfActionLink modes="View PricebookEntries RelatedPricebookEntryListForPricebook RelatedStandardPriceList" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink lightningLabel="Delete" modes="View PricebookEntries RelatedPricebookEntryListForPricebook RelatedStandardPriceList" n="Delete" requiresRow="true" s="3" t="Del"/>
+    <sfActionLink lightningActionName="MassChangeOwner" massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View PricebookEntries" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View PricebookEntries" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink n="AddPricebookEntryOnPricebook" s=""/>
+    <sfActionLink n="AddPricebookEntryOnProduct" s=""/>
+    <sfActionLink buttonName="add" lightningLabel="Add Standard Price" modes="PricebookEntries RelatedStandardPriceList" n="AddStandardPrice" t="Add"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome PricebookEntries RelatedPricebookEntryListForPricebook RelatedStandardPriceList" n="View" requiresRow="true" s="1"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink modes="View" n="PrintableView" t="Printable View"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink buttonName="add" lightningActionName="MultiAddPricebookEntryOnPricebook" lightningLabel="Add Products" modes="RelatedPricebookEntryListForPricebook" n="addProduct" t="Add"/>
+    <sfActionLink lightningActionName="AddPricebookEntryOnProduct" modes="PricebookEntries" n="add" t="Add to Price Book"/>
+    <sfActionLink buttonName="edit" modes="PricebookEntries, RelatedPricebookEntryListForPricebook" n="editAll" t="Edit All"/>
+  </standardActions>
+  <homeListColumns>
+    <string>PRICEBOOKENTRY.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>PRICEBOOKENTRY.NAME</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>PRICEBOOKENTRY.NAME</string>
+    <string>PRODUCT.NAME</string>
+    <string>PRODUCT.CUSTOMER_PRODUCT_ID</string>
+    <string>PRODUCT.DEFAULT_PRICE</string>
+    <string>PRODUCT2.DESCRIPTION</string>
+    <string>PRODUCT2.FAMILY_ENUM</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>
