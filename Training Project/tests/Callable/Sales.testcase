@@ -2527,7 +2527,16 @@
       </type>
     </param>
   </params>
+  <outputParams/>
   <args>
     <argument id="reuseConnectionName"/>
   </args>
+  <outputArgs>
+    <outputArgument id="Admin" scope="Global">
+      <name class="value" valueClass="string">Admin</name>
+    </outputArgument>
+    <outputArgument id="output" scope="Global">
+      <name class="value" valueClass="string">output</name>
+    </outputArgument>
+  </outputArgs>
 </testCase>
